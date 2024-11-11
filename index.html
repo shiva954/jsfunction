@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>push and pop</title>
+</head>
+
+<body>
+    <h3>open console for output</h3>
+    <script>
+        let arr = [5, 6, 7, 8, 9, 10];
+
+        let array = {
+            push: (val) => {
+                let newArr = [];
+                for (let i = 0; i < arr.length + 1; i++) {
+                    newArr[i] = arr[i];
+                }
+                newArr[arr.length] = val;
+                arr = newArr;
+            },
+            pop: () => {
+                let newArr = [];
+                for (let i = 0; i < arr.length - 1; i++) {
+                    newArr[i] = arr[i];
+                }
+                arr = newArr;
+            }
+        }
+        array.push(15);
+        console.log(arr);
+        array.pop();
+        console.log(arr);
+
+    </script>
+</body>
+
+</html>
